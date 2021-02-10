@@ -1,0 +1,27 @@
+body {
+  background-color: #e2e6e8;
+  font-family: Helvetica, sans-serif;
+}
+
+.card {
+  border-color: #0c4160;
+}
+.card img {
+  height: 200px;
+}
+.card .card-body {
+  background-color: #0c4160;
+}
+.card .card-body a {
+  background-color: #aea885;
+  border-color: #aea885;
+}
+.card .card-body a h5 {
+  color: #0c4160;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  height: 80vh;
+}
+
+/*# sourceMappingURL=main.css.map */

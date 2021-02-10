@@ -1,0 +1,32 @@
+@import 'base';
+
+body {
+  background-color: $bgcolor;
+  font-family: $font-stack;
+}
+
+.card {
+  border-color: $card-color;
+  img {
+    height: $card-img-ht;
+  }
+  .card-body {
+    background-color: $card-color;
+    a {
+      background-color: $card-btn-color;
+      border-color: $card-btn-color;
+      h5 {
+        color: $card-btn-text;
+      }
+    }
+  }
+}
+.carousel {
+  .carousel-inner {
+    .carousel-item {
+      img {
+        height: 80vh;
+      }
+    }
+  }
+}

@@ -12,21 +12,31 @@
     />
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a
+            href="index.html"
+            id="back-btn"
+            class="btn btn-primary"
+            style="width: 100%"
+          >
+            Main Page
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="container text-center">
       <h1 id="page-head"></h1>
     </div>
     <div class="container">
-      <div class="row">
-        <!-- <div class="col-12 col-sm-6">
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">  
-          </div>
-        </div> -->
-      </div>
+      <p id="description" class="" style="background-color: antiquewhite"></p>
     </div>
     <div class="container">
-      <p id="description" class=""></p>
+      <div id="images" class="row"></div>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -43,60 +53,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        function parse_query_string(query) {
-          var vars = query.split('&');
-          var query_string = {};
-          for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split('=');
-            var key = decodeURIComponent(pair[0]);
-            var value = decodeURIComponent(pair[1]);
-            // If first entry with this name
-            if (typeof query_string[key] === 'undefined') {
-              query_string[key] = decodeURIComponent(value);
-              // If second entry with this name
-            } else if (typeof query_string[key] === 'string') {
-              var arr = [query_string[key], decodeURIComponent(value)];
-              query_string[key] = arr;
-              // If third or later entry with this name
-            } else {
-              query_string[key].push(decodeURIComponent(value));
-            }
-          }
-          return query_string;
-        }
-        const query = window.location.search.substring(1);
-        const qs = parse_query_string(query);
-        console.log(qs);
-        const queryStr = qs.id;
-        console.log(queryStr);
-        //api connection
-        const settings = {
-          url: 'https://api.unsplash.com/topics/' + queryStr,
-          method: 'GET',
-          headers: {
-            Authorization:
-              'Client-ID mYj9awBmDjuLzvC_Xa--o75rGZdsvi1EIWIRB3mxHxo',
-          },
-        };
-        console.log(settings.url);
-        $.ajax(settings).done(function (response) {
-          //display description
-          //console.log(response.preview_photos);
-          $('#page-head').html(`${response.title}`);
-          response.preview_photos.forEach((element) => {
-            $('.row').append(`<div class="col-12 col-sm-6 mt-3">
-            <div class="card">
-              <img src="${element.urls.full}" class="card-img-top" alt="..." style="height:500px" >
-            </div>
-            
-          </div>`);
-          });
-          $('#description').html(`${response.description}`);
-        });
-      });
-    </script>
+    <script src="helpers.js"></script>
+    <script src="scripts/details.js"></script>
   </body>
 </html>

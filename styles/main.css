@@ -24,4 +24,8 @@ body {
   height: 80vh;
 }
 
+.container #description {
+  background-color: antiquewhite;
+}
+
 /*# sourceMappingURL=main.css.map */

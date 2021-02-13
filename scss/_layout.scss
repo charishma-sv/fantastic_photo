@@ -1,4 +1,4 @@
-@use 'base';
+@import 'base';
 
 body {
   background-color: $bgcolor;
@@ -28,5 +28,10 @@ body {
         height: 80vh;
       }
     }
+  }
+}
+.container {
+  #description {
+    background-color: $description-bgcolor;
   }
 }

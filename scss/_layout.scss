@@ -1,22 +1,22 @@
-@import 'base';
+@use 'base';
 
 body {
-  background-color: $bgcolor;
-  font-family: $font-stack;
+  background-color: base.$bgcolor;
+  font-family: base.$font-stack;
 }
 
 .card {
-  border-color: $card-color;
+  border-color: base.$card-color;
   img {
-    height: $card-img-ht;
+    height: base.$card-img-ht;
   }
   .card-body {
-    background-color: $card-color;
+    background-color: base.$card-color;
     a {
-      background-color: $card-btn-color;
-      border-color: $card-btn-color;
+      background-color: base.$card-btn-color;
+      border-color: base.$card-btn-color;
       h5 {
-        color: $card-btn-text;
+        color: base.$card-btn-text;
       }
     }
   }
@@ -32,6 +32,6 @@ body {
 }
 .container {
   #description {
-    background-color: $description-bgcolor;
+    background-color: base.$description-bgcolor;
   }
 }
